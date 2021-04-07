@@ -104,7 +104,7 @@ Statement
 // {
 //     echo "Change Password accepted";
 // }
-
+echo "hello";
 
 ?>
 </body>
