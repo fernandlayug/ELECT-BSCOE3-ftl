@@ -6,7 +6,7 @@
     <body>
 
         <?php 
-            define ("BR", "<br />");
+        define ("BR", "<br />");
         $fname = "Juan";
         $mname = "P";
         $sname  = "Dela Cruz";
@@ -14,8 +14,7 @@
         $Pre  = 80.50;
         $Mid = 85.10;
         $Fin = 90.55;
-//Concatenation
-
+        //Concatenation
         $Fullname = $sname . ", " . $fname . " " . $mname;
         $finalgrade = ($Pre + $Mid + $Fin) / 3;
 
@@ -26,7 +25,7 @@
         echo "Subject Final Grade: " .  $finalgrade .  BR;
 
 if ($finalgrade > 74)
-echo "Remarks: Congratulations You Passed!" . BR;
+echo "Remarks: Congratulations You Passed!" . BR; 
 else
 echo "Remarks: Sorry you Failed" . BR;
 
@@ -64,9 +63,6 @@ switch($coursecode){
 }
 
 ?>
-
-
-
 
 
     </body>
