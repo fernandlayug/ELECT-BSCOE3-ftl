@@ -16,6 +16,10 @@ echo "$Province[4]<br />";
 echo "$Province[5]<br />";
 
 echo "Central Luzon has ", count($Province), " Provinces.";
+
+using the foreach loop
+
+
         ?>
 
 
