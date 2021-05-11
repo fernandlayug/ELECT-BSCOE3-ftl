@@ -41,7 +41,7 @@ if(isset($_POST['createrecord']))
     
     if(mysqli_query($dbconnect, $sqlstring)){
         echo "New record created <br>";
-        $result = mysqli_num_rows($dbconnect);
+       // $result = mysqli_num_rows($dbconnect);
         
     } else 
     {

@@ -20,7 +20,7 @@ if(isset($_POST['updatercord']))
         echo "Unable to execute the query.  Error code " . mysqli_error($dbconnect);
     }
    
-    mysqli_close($dbconnect);
+ 
 
 }
 
@@ -43,6 +43,7 @@ if(isset($_POST['updatercord']))
     <h1>Update Records</h1>
 
     <?php 
+
     if(isset($_GET['update_id'])){
       $E_id = $_GET['update_id'];
       $sqlstring = mysqli_query($dbconnect, "SELECT * FROM tblinfo WHERE id = '$E_id'");
@@ -51,6 +52,7 @@ if(isset($_POST['updatercord']))
       $name = $r['name'];
       $emailadd = $r['email'];
     }
+    mysqli_close($dbconnect);
     ?>
 
    <form name="updaterecords" action="<?php $_PHP_SELF ?>" method="post">
@@ -66,6 +68,7 @@ if(isset($_POST['updatercord']))
     <div align="right">
    <input type="submit" class="btn btn-primary" name="updatercord" value="Update Record">
    </div>
+   
 </form>
   </body>
 </html>

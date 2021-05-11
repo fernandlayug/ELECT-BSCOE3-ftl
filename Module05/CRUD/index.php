@@ -20,6 +20,9 @@
   <div class="input-group-append">
     <input class="btn btn-outline-secondary" type="submit" name="searchrecord" value="Search"/>
   </div>
+  <div class="input-group-append">
+    <a href="create.php" class="btn btn-primary">Add Records</a>
+  </div>
 </div>
 </div>
 </form>
