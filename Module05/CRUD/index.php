@@ -14,11 +14,13 @@
     <h3>Retrieving Records</h3>
 <form name="searchrecords" action="<?php $_PHP_SELF ?>" method="post"> 
 
+<div class="col-sm-10">
 <div class="input-group mb-3">
   <input type="text" class="form-control" placeholder="Search Criteria" name="usersearch">
   <div class="input-group-append">
     <input class="btn btn-outline-secondary" type="submit" name="searchrecord" value="Search"/>
   </div>
+</div>
 </div>
 </form>
 
@@ -38,10 +40,12 @@ if(mysqli_num_rows($queryresult)>0){
     $searchresult = mysqli_num_rows($queryresult);
     echo "Found $searchresult record/s";
 
-echo "<table class=\"table table-striped\"><tr> <th>ID</th> <th>NAME</th> <th>EMAIL</th>";
+echo "<table class=\"table table-striped\"><tr> <th>ID</th> <th>NAME</th> <th>EMAIL</th> <th>Action</th>";
    
 while($row = mysqli_fetch_assoc($queryresult)){
-        echo "<tr><td>" . $row['ID'] . "</td><td>" . $row['name'] . "</td><td>" . $row['email'] . "</td></tr>";
+        echo "<tr><td>" . $row['ID'] . "</td><td>" . $row['name'] . "</td><td>" . $row['email'] . 
+        "</td><td> <a href=\"update.php?update_id=" . $row['ID'] . "\" class=\"btn btn-warning\">Edit</a> 
+        <a href=\"delete.php?delete_id=" . $row['ID'] . "\" class=\"btn btn-danger\">Delete</a> </td></tr>";
     }
 } else
 {
